@@ -11,6 +11,14 @@ body.node-type-apartment {
             .field-items { padding-bottom: 0px; }
           }
         }
+        .field-name-field-location {
+          .field-items {
+            .odd:before {
+              content: "\230a \00a0";
+              padding-left: 0.5em;
+            }
+          }
+        }
       }
     }
     .general-amenities {

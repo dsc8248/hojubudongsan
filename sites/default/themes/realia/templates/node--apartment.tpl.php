@@ -15,7 +15,9 @@
                     <?php print render($content['field_price']); ?>
                     <?php print render($content['field_contract_type']); ?>
                     <?php print render($content['field_type']); ?>
-                    <?php print render($content['field_location']); ?>
+                    <?php
+//										kpr($content['field_location']);
+										print render($content['field_location']); ?>
                     <?php print render($content['field_bathrooms']); ?>
                     <?php print render($content['field_bedrooms']); ?>
                     <?php print render($content['field_area']); ?>

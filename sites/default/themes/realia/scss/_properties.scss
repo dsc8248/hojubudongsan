@@ -17,7 +17,13 @@
       }
     }
 
-	.item { @include shadow; background-color: #fff; margin-bottom: 30px; padding-bottom: 10px; position: relative;
+	.item {
+      @include shadow;
+      background-color: #fff;
+      margin-bottom: 30px;
+      padding-bottom: 10px;
+      position: relative;
+      min-height: 370px;
     .views-field-field-image { height: 169px; overflow: hidden;
       .field-content {
         @include transition(opacity .2s linear, width .2s linear);
@@ -36,8 +42,25 @@
         }
     }
     .content { margin-right: 30px; }
-		.views-field-field-location { padding: 0px 15px; }
-		.views-field-field-price { background-color: #ffffff; color: $black; font-size: 18px; padding: 5px 16px; position: absolute; right: 15px; bottom: 105px; }
+		.views-field-field-location {
+          padding: 0px 15px;
+          font-weight: bold;
+        }
+        .views-field-body {
+          padding: 10px 15px 0 15px;
+          a {
+            color: inherit;
+          }
+        }
+		.views-field-field-price {
+          background-color: #ffffff;
+          color: $black;
+          font-size: 18px;
+          padding: 2px 4px;
+          position: absolute;
+          right: 5px;
+          top: 134px;
+        }
 		.views-field-field-area { color: $black; float: left; margin-top: 8px; 
 			.views-label { display: inline; font-weight: bold; padding: 0px 0px 0px 15px; }
 			.field-content { display: inline; }

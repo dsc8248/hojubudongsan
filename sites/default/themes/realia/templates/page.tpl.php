@@ -181,13 +181,13 @@
         <div id="footer-top-inner" class="container">
             <div class="row">
                 <?php if ($page['bottom_quadruple_first']): ?>
-                <div class="span3" role="complementary">
+                <div class="span4" role="complementary">
                     <?php print render($page['bottom_quadruple_first']); ?>
                 </div><!-- /.span3 -->
                 <?php endif; ?>
 
                 <?php if ($page['bottom_quadruple_second']): ?>
-                <div class="sidebar span3" role="complementary">
+                <div class="sidebar span5" role="complementary">
                     <?php print render($page['bottom_quadruple_second']); ?>
                 </div><!-- /.span3 -->
                 <?php endif; ?>

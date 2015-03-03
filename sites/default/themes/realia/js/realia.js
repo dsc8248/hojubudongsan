@@ -1,16 +1,5 @@
 Drupal.behaviors.languageSwitch = {
     attach: function (context, settings) {
-        var languageSwitch = jQuery('#block-realia-blocks-realia-language', context);
-        jQuery('.expand', languageSwitch).hide();
-
-        languageSwitch.hover(
-            function () {
-                jQuery('.expand', languageSwitch).show();
-            },
-            function () {
-                jQuery('.expand', languageSwitch).hide();
-            }
-        );
 
         var min = parseInt(jQuery('#edit-field-price-value-min').val());
         var max = parseInt(jQuery('#edit-field-price-value-max').val());
@@ -63,6 +52,6 @@ Drupal.behaviors.languageSwitch = {
                 jQuery('#aviators-palette').css({'margin-left': '0px'});
             });
         }
+
     }
 }
-

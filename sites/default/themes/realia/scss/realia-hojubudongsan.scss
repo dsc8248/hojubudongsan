@@ -1,2 +1,6 @@
-@import 'combinations/hojubudongsan';
+// custom theme built on top of green light scheme
+
+@import 'combinations/green_light';
 @import 'default';
+
+@import 'hojubudongsan'; // custom overriding

@@ -1,18 +1,6 @@
   <div id="wrapper-outer" class="<?php if (!$page['triptych_bottom']): ?>no-triptych<?php endif; ?>">
 <div id="wrapper">
 <div id="wrapper-inner">
-    <?php if ($breadcrumb): ?>
-        <div class="breadcrumb-wrapper">
-            <div class="container">
-                <div class="row">
-                    <div class="span12">
-                        <?php print $breadcrumb; ?>
-                    </div>
-                </div><!-- /.row -->
-            </div><!-- /.container -->
-        </div><!-- /.breadcrumb-wrapper -->
-    <?php endif;?>
-
     <div id="header-wrapper">
         <div id="header">
             <div id="header-inner">
@@ -20,7 +8,7 @@
                     <div class="navbar">
                         <div class="navbar-inner">
                             <div class="row">
-                                <div class="span4">
+                                <div class="span3">
                                     <a href="#nav" class="hidden-desktop" id="btn-nav"><?php print t('Toggle navigation'); ?></a>
 
                                     <?php if ($logo): ?>
@@ -53,7 +41,7 @@
                                 <?php endif; ?>
 
                                 <?php if (!empty($page['header_middle'])): ?>
-                                    <div class="span5">
+                                    <div class="span6">
                                         <?php print render($page['header_middle']); ?>
                                     </div>
                                 <?php endif; ?>
@@ -87,23 +75,8 @@
 
     <div id="content">
         <div class="container">
-            <?php if ($page['highlighted']): ?>
-                <div class="row" id="highlighted">
-                    <div class="span9">
-                        <?php if ($page['highlighted']): ?>
-                        <div class="highlighted"><?php print render($page['highlighted']); ?></div>
-                        <?php endif; ?>
-                    </div>
-
-                    <div class="span3">
-                        <?php if ($page['highlighted_sidebar']): ?>
-                        <?php print render($page['highlighted_sidebar']); ?>
-                        <?php endif; ?>
-                    </div>
-                </div><!-- /#highlighted -->                
-            <?php endif; ?>
-
             <div class="row">
+
                 <?php if ($page['sidebar_first']): ?>
                 <div class="sidebar span3" role="complementary">
                     <?php print render($page['sidebar_first']); ?>
@@ -111,6 +84,11 @@
                 <?php endif; ?>
 
                 <section class="<?php print _bootstrap_content_span($columns); ?>">
+									<?php if ($is_front): ?>
+										<?php if ($page['highlighted']): ?>
+											<div class="highlighted"><?php print render($page['highlighted']); ?></div>
+										<?php endif; ?>
+									<?php endif; ?>
 
                     <a id="main-content"></a>
                     <?php print render($title_prefix); ?>

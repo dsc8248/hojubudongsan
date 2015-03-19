@@ -5,6 +5,7 @@
     <?php hide($content['links']); ?>
     <?php hide($content['field_tags']); ?>
     <?php hide($content['field_general_amenities']); ?>
+		<?php hide($content['field_address']); ?>
 
     <div class="pull-left overview">
         <div class="row">
@@ -12,12 +13,11 @@
                 <h2><?php print t('Overview'); ?></h2>
 
                 <div class="table">
-                    <?php print render($content['field_price']); ?>
+										<?php print render($content['field_sales_type']); ?>
+										<?php print render($content['field_price']); ?>
                     <?php print render($content['field_contract_type']); ?>
                     <?php print render($content['field_type']); ?>
-                    <?php
-//										kpr($content['field_location']);
-										print render($content['field_location']); ?>
+                    <?php	print render($content['field_location']); ?>
                     <?php print render($content['field_bathrooms']); ?>
                     <?php print render($content['field_bedrooms']); ?>
                     <?php print render($content['field_area']); ?>
@@ -30,7 +30,10 @@
 
     <h2 class="general-amenities"><?php print t('General amenities'); ?></h2>
     <?php print render($content['field_general_amenities']); ?>
-    <?php if (!empty($content['field_tags']) || !empty($content['links'])): ?>
+		<h2 class="map"><?php print t('Map'); ?></h2>
+		<?php print render($content['field_address']); ?>
+
+		<?php if (!empty($content['field_tags']) || !empty($content['links'])): ?>
 
     <footer>
         <?php print render($content['field_tags']); ?>

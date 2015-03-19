@@ -1,0 +1,69 @@
+$green: #54c884;
+$green-light: #419a66;
+$green-medium: #215035;
+$green-dark: #1a402a;
+$green-darker: #02293a;
+$red: #e4002b;
+.font-green { color: $green; }
+.font-green-light { color: $green-light; }
+.font-green-medium { color: $green-medium; }
+.font-green-dark { color: $green-dark; }
+.font-green-darker { color: $green-darker; }
+.font-red { color: $red !important; }
+
+.highlighted {
+  margin-top: 30px;
+}
+.block-filter {
+  background-color: #e4002b !important; // from realestate.com.au
+}
+
+.navigation-wrapper .navigation .block-superfish .content ul li.sf-depth-1 > .nolink.active,
+.navigation-wrapper .navigation .block-superfish .content ul li.sf-depth-1 > a.active,
+.navigation-wrapper .navigation .block-superfish .content ul li.sf-depth-1 > .nolink:hover,
+.navigation-wrapper .navigation .block-superfish .content ul li.sf-depth-1 > a:hover {
+  border-top-color: #e4002b !important; // from realestate.com.au
+}
+
+article.node {
+  h2 {
+    margin-bottom: 10px;
+  }
+}
+.float_right {
+  float: right;
+}
+.float_left {
+  float: left;
+}
+
+.page-node {
+  .node {
+    .field-name-body { padding-top: 1.5em; }
+  }
+
+  .node {
+    .field-name-field-location {
+      .field-items {
+        .even, .odd {
+          float: left;
+        }
+        .odd {
+          &:before {
+            content: " - ";
+          }
+        }
+      }
+    }
+  }
+}
+
+.view-news {
+  .listing-body {
+    margin-top: 12px;
+    padding-top: 12px;
+    background-image: url('../img/border.png');
+    background-position: left top;
+    background-repeat: repeat-x;
+  }
+}

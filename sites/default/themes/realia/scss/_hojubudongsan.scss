@@ -39,7 +39,10 @@ article.node {
 
 .page-node {
   .node {
-    .field-name-body { padding-top: 1.5em; }
+    .field-name-body {
+      clear: both;
+      padding-top: 1.5em;
+    }
   }
 
   .node {

@@ -10,13 +10,11 @@
     <div class="pull-left overview">
         <div class="row">
             <div class="span3">
-                <h2><?php print t('Overview'); ?></h2>
-
                 <div class="table">
 										<?php print render($content['field_sales_type']); ?>
-										<?php print render($content['field_price']); ?>
                     <?php print render($content['field_contract_type']); ?>
                     <?php print render($content['field_type']); ?>
+										<?php print render($content['field_price']); ?>
                     <?php	print render($content['field_location']); ?>
                     <?php print render($content['field_bathrooms']); ?>
                     <?php print render($content['field_bedrooms']); ?>
@@ -28,10 +26,15 @@
 
     <?php print render($content); ?>
 
+		<?php if (!empty($content['field_general_amenities']['#items'])): ?>
     <h2 class="general-amenities"><?php print t('General amenities'); ?></h2>
     <?php print render($content['field_general_amenities']); ?>
+		<?php endif; ?>
+
+		<?php if (!empty($content['field_address']['#items'])): ?>
 		<h2 class="map"><?php print t('Map'); ?></h2>
 		<?php print render($content['field_address']); ?>
+		<?php endif; ?>
 
 		<?php if (!empty($content['field_tags']) || !empty($content['links'])): ?>
 

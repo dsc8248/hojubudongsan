@@ -1,6 +1,12 @@
 body.node-type-apartment {
   article.node { @include shadow; background-color: #fff; padding: 20px;
-    .overview { border: 1px solid $gray-light; margin: 0px 30px 10px 0px; padding: 20px;
+    .overview {
+      border: 1px solid $gray-light;
+      margin-bottom: 1em;
+      width: 100%;
+      .row {
+        padding: 20px;
+      }
       h2 { clear: both; line-height: 1; margin: 0px 0px 20px 0px; }
       .table { display: table; margin: 0px;
         .field { display: table-row;
@@ -20,9 +26,6 @@ body.node-type-apartment {
           }
         }
       }
-    }
-    .general-amenities {
-      clear: both;
     }
 
     ul { list-style: none;
